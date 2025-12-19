@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import bcrypt from "bcryptjs"
 import { createSessionToken, setSessionCookie } from "@/lib/session"
-
+// auth login route
 export async function POST(request: Request) {
   try {
     const { email, password } = await request.json()
